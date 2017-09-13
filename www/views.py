@@ -34,8 +34,8 @@ def edit(request, slug):
 		form = PersonForm(person_dict)
 		return render(request, 'edit.html', {'form': form})
 
-def verify_email(backend, user, response, *args, **kwargs):
-	if backend.name == 'google-oauth2':
-		existing_person = Person.objects.filter(email = kwargs.get('details').get('email'))
-		if not existing_person:
-			return HttpResponse('You don\'t have access!')
+# def verify_email(backend, user, response, *args, **kwargs):
+# 	if backend.name == 'google-oauth2':
+# 		existing_person = Person.objects.filter(email = kwargs.get('details').get('email'))
+# 		if not existing_person:
+# 			return HttpResponse('You don\'t have access!')
