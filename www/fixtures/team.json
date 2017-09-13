@@ -1,0 +1,112 @@
+[
+	{
+		"model": "www.person",
+		"pk":1,
+		"fields": {
+			"name": "Adam Fortuna",
+			"title": "Course Director",
+			"email": "adam@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":2,
+		"fields": {
+			"name": "John Smith",
+			"title": "Course Mentor",
+			"email": "john@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":3,
+		"fields": {
+			"name": "Ben Ford",
+			"title": "Ford Director",
+			"email": "ben@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":4,
+		"fields": {
+			"name": "Ford Ben",
+			"title": "Course Lead",
+			"email": "ford@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":5,
+		"fields": {
+			"name": "Kent Clark",
+			"title": "Course Head",
+			"email": "clark@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":6,
+		"fields": {
+			"name": "Phillip Will",
+			"title": "Content Director",
+			"email": "philip@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":7,
+		"fields": {
+			"name": "Max Well",
+			"title": "Course Analyst",
+			"email": "max@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":8,
+		"fields": {
+			"name": "Alex Nabe",
+			"title": "Course Manager",
+			"email": "alex@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":9,
+		"fields": {
+			"name": "Mark Dean",
+			"title": "Course Marketer",
+			"email": "mark@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	},
+
+	{
+		"model": "www.person",
+		"pk":10,
+		"fields": {
+			"name": "Bran James",
+			"title": "Content Manager",
+			"email": "bran@switch.ng",
+			"image": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192484_1469560569803045_4692177961833149142_n.jpg?oh=ca20dcc8dcd5891ad05b253fff7789c4&oe=5A5CAA85"
+		}
+	}
+
+]
