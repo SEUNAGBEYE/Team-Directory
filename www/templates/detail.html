@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directory</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'normalize.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+<body>
+	<main>
+		<h1>Directory</h1>
+				<section>
+					{% if user.email == person.email %}
+						<a href="{% url 'edit' person.slug %}"></a>
+					{% endif %}
+					<img src="{{ person.image }}">
+					<h2>{{ person.name }}</h2>
+					<p class="person-title">{{ person.title }}</p>
+					<p class="person-email">{{ person.email }}</p>
+					
+					<p>{{ person.bio }}</p>
+					<p>{{ person.github }}</p>
+					<p>{{ person.birthday }}</p>
+				</section>
+			
+	</main>
+</body>
+</html>

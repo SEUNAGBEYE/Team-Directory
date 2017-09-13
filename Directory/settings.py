@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'www',
+    'social_django',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,14 +68,17 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'Directory.wsgi.application'
-application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
+# application = get_wsgi_application()
+application = DjangoWhiteNoise(WSGI_APPLICATION)
 
 
 # Database
@@ -120,6 +124,35 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Social authentication
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GooglePlusAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.user.create_user',
+    'www.views.verify_email',  # <--- set the path to the function
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)
+# 'social_core.backends.google.GooglePlusAuth',
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
+SOCIAL_AUTH_LOGIN_lOGIN_URL = '/login/'
+SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/logout/'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '936226084788-u315prso0oho3snkjv320tqjs1u6jom9.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'v4f-VJIHpl0YvbboJ9Vp7Q7x'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -133,4 +166,4 @@ STATIC_DIRS = (
     BASE_DIR + 'www/static',
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifesStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
