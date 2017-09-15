@@ -162,8 +162,8 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'v4f-VJIHpl0YvbboJ9Vp7Q7x'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-STATIC_DIRS = (
+STATIC_DIRS = [
     BASE_DIR + 'www/static',
-)
+]
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
